@@ -1,0 +1,45 @@
+package Page;
+
+import java.awt.AWTException;
+import java.awt.Robot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class ProfilePageFactory {
+	WebDriver driver;
+	@FindBy(xpath="//a[text()=\"Login\"]") WebElement login;
+	@FindBy(xpath="//input[@placeholder=\"Email address\"]") WebElement email;
+	@FindBy(xpath="//input[@class=\"input password\"]") WebElement password;
+	@FindBy(xpath="//button[text()=\"Login\"]") WebElement submit;
+	@FindBy(xpath="//*[@id=\"_globalNav\"]/div[2]/div[3]/div[2]/strong") WebElement userprofile;
+	@FindBy(xpath="//a[@class=\"rpY21MLink ripple dark\"]")WebElement profile;
+
+	 
+		public ProfilePageFactory (WebDriver driver) {
+
+	    	this.driver=driver;
+
+	     PageFactory.initElements(driver, this);
+
+	    }
+
+		public void background() throws InterruptedException, AWTException
+		{
+			login.click();
+			Thread.sleep(2000);
+			email.sendKeys("keerthanamuniraj18@gmail.com");
+			Robot robot = new Robot();
+			int xCoordinate = 500;
+		    int yCoordinate = 500;
+		    robot.mouseMove(xCoordinate, yCoordinate);
+		    Thread.sleep(2000);
+		    password.sendKeys("Keerthz_18");
+			Thread.sleep(1000);
+			submit.click();
+			Thread.sleep(1000);
+		}
+
+}
+

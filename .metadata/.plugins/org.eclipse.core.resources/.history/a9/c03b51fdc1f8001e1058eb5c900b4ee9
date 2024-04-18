@@ -1,0 +1,22 @@
+@Profile
+Feature: Working on the profile
+Background: User is logged in on the website
+
+
+@valid
+Scenario Outline: To enter the valid details and save
+Given User is logged in and click on profile
+When user click on user profile
+And user click on profile
+And user click on add 10th mark sheet
+And user selects from dropdown Board
+And Fill the school details "<School>"
+And user selects from dropdown Passing Out Year
+And user selects from dropdown grading system
+And Fill the score details "<score>"
+Then click on save
+ 
+Examples:
+|School|score|
+|Christ King Public School|89  |
+

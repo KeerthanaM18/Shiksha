@@ -1,0 +1,122 @@
+package Page;
+
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.InputEvent;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class ProfilePageFactory1 {
+	WebDriver driver;
+	//LOGIN
+	@FindBy(xpath="//a[text()=\"Login\"]") WebElement login;
+	@FindBy(xpath="//input[@placeholder=\"Email address\"]") WebElement email;
+	@FindBy(xpath="//input[@class=\"input password\"]") WebElement password;
+	@FindBy(xpath="//button[text()=\"Login\"]") WebElement submit;
+	
+	//UserProfile
+	@FindBy(xpath="//strong[@class=\"gnbY21UserName\"]") WebElement userprofile;
+	@FindBy(xpath="//a[@href=\"/userprofile/edit\"]")WebElement profile;
+	@FindBy(xpath="(//button[@class=\"custom-button custom-button--primary\"])[1]") WebElement Marks;
+	
+
+	//10th marks 
+	@FindBy(xpath="(//div[@class=\"FieldWrapper\"]/div/input)[1]")WebElement Board;
+	@FindBy(xpath="//ul[@class=\"_69be\"]/li[3]/span")WebElement Board1;
+	@FindBy(xpath="(//div[@class=\"text-field\"])[2]//input")WebElement School;
+	@FindBy(xpath="(//div[@class=\"text-field\"])[3]//input")WebElement passingyear;
+	@FindBy(xpath="//ul[@class=\"_69be\"]/li[1]/span")WebElement passingyear1;
+	@FindBy(xpath="(//div[@class=\"text-field\"])[4]//input")WebElement Grading;
+	@FindBy(xpath="//ul[@class=\"_69be\"]/li[4]/span\r\n")WebElement Grading1;
+	@FindBy(xpath="(//div[@class=\"text-field\"])[5]//input")WebElement score;
+	@FindBy(xpath="//div[@class=\"_202e\"]/button[2]")WebElement Save;
+	 
+		public ProfilePageFactory1 (WebDriver driver)
+		{
+	    	this.driver=driver;
+	    	PageFactory.initElements(driver, this);
+
+	    }
+		//LOGIN
+		public void background() throws InterruptedException, AWTException
+		{
+			login.click();
+			Thread.sleep(2000);
+			email.sendKeys("keerthanamuniraj18@gmail.com");
+			Robot robot = new Robot();
+			int xCoordinate = 500;
+		    int yCoordinate = 500;
+		    robot.mouseMove(xCoordinate, yCoordinate);
+		    Thread.sleep(2000);
+		    password.sendKeys("Keerthz_18");
+			Thread.sleep(1000);
+			submit.click();
+			Thread.sleep(1000);
+		}
+		
+		public void Profile1()
+		{
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].click();", userprofile);
+		}
+		
+		public void UserProfile1() throws AWTException, InterruptedException 
+		{
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].click();", profile);
+			
+			Robot r = new Robot();
+			r.mouseMove(10, 500);
+			r.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+			r.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+			Thread.sleep(1000);
+	        JavascriptExecutor js1 = (JavascriptExecutor) driver;
+	        js1.executeScript("arguments[0].scrollIntoView(true);",Marks);
+	    	Marks.click();
+	    	Thread.sleep(1000);
+		}
+		public void board1()
+		{
+			Board.click();
+			Board1.click();
+		}
+		
+		
+		public void school1(String Scl) throws InterruptedException
+		{
+			Thread.sleep(1000);
+			School.sendKeys(Scl);
+			
+		}
+		public void year1()
+		{
+			passingyear.click();
+			passingyear1.click();
+		}
+		public void grade1()
+		{
+			Grading.click();
+			Grading1.click();
+			
+		}
+		public void scroll1() {
+			JavascriptExecutor js=(JavascriptExecutor)driver;
+			js.executeScript("window.scroll(0,200)");
+		}
+		public void Score1(String Scr) throws InterruptedException {
+			Thread.sleep(1000);
+			score.sendKeys(Scr);	
+		}
+		
+		public void save1()
+		{
+			Save.click();
+		}
+}
+//----------------------------------------------------------------------------------------------------------
+
+

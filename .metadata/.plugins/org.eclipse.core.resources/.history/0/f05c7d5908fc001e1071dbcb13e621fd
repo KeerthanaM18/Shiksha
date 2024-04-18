@@ -1,0 +1,38 @@
+
+Feature: Working on the profile
+
+  Background: 
+    Given User is logged in and click on profile
+
+  @10Marks
+  Scenario Outline: To enter the valid details and save
+    When user click on user profile
+    And user click on profile
+    And user click on add 10th mark sheet	
+    And user selects from dropdown Board
+    And Fill the school details <School>
+    And User selects from dropdown Passing Out Year
+    And User selects from dropdown grading system
+    And Fill the score details <score>
+    Then click on save
+
+    Examples: 
+      | School| score |
+      | Christ King Public School | 89 |
+      
+   @MBA
+   Scenario: To valid that the Like functionality
+   When user click on MBA option
+   And User clicks on Exam
+   And User clicks on CAT
+   And scroll down
+   And click on Like button
+   Then Course shortlisted successfully
+   
+   @CAT
+   Scenario: To valid the share functionality
+   When User clicks on Mba
+   And user selects exam
+   And user selects cat
+   And user clicks on share
+   And redirects to share option

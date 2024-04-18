@@ -1,0 +1,85 @@
+package StepDefinition;
+
+import java.awt.AWTException;
+import org.openqa.selenium.WebDriver;
+import DriverSetup.SetupDriver;
+import Page.ProfilePageFactory;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class EducationBackground {
+	static WebDriver driver;
+	ProfilePageFactory lp;
+	
+	@Given("User is logged in and click on profile")
+	public void user_is_logged_in_and_click_on_profile() throws InterruptedException, AWTException 
+	{
+		driver = SetupDriver.chromedriver();
+		   lp=new ProfilePageFactory(driver);
+	       lp.background();
+ 	       
+	}
+
+	@When("user click on user profile")
+	public void user_click_on_user_profile() throws AWTException, InterruptedException 
+	{
+	   lp.UserProfile();
+	}
+
+	@And("user click on profile")
+	public void user_click_on_profile() 
+	{
+	    lp.Profile();
+	}
+
+	
+	@And("user click on add 10th mark sheet")
+	public void user_click_on_add_10th_mark_sheet() 
+	{
+	 
+	    
+	}
+
+	@And("user selects from dropdown Board")
+	public void user_selects_from_dropdown_board() 
+	{
+	   lp.board(); 
+	}
+
+	@And("user selects from dropdown Passing Out Year")
+	public void user_selects_from_dropdown_passing_out_year() 
+	{
+	 lp.year();   
+	}
+
+	@And("user selects from dropdown grading system")
+	public void user_selects_from_dropdown_grading_system() 
+	{
+	   lp.grade();
+	}
+
+
+//	@And("Fill the required details (.*) and (.*)")
+//	public void fill_the_required_details(String School, String score)
+//	{
+//	    lp.typedata(School, scre);
+//	}
+	@When("Fill the required details are (.*) and (.*)")
+	public void fill_the_required_details_are_and(String School, String score) 
+	{
+	    lp.typedata(School, score);
+	}
+
+
+
+	@Then("click on save")
+	public void click_on_save()
+	{
+	    lp.save();
+	}
+
+
+
+}

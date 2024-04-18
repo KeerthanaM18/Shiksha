@@ -1,0 +1,69 @@
+Feature: Working on the profile
+
+  Background: 
+    Given User is logged in and click on profile
+
+  @10Marks
+  Scenario Outline: To enter the valid details and save
+    When user click on user profile
+    And user click on profile
+    And user click on add 10th mark sheet	
+    And user selects from dropdown Board
+    And Fill the school details <School>
+    And User selects from dropdown Passing Out Year
+    And User selects from dropdown grading system
+    And Fill the score details <score>
+    Then click on save
+
+    Examples: 
+      | School| score |
+      | Christ King Public School | 89 |
+      
+   #@invalid
+   #Scenario Outline: User enters invalid details and save
+   #When User clicks on  User Profile
+   #And User clicks on Profile
+   #And User clicks on add 10th marksheet
+   #And User selects the Board option from dropdown 
+   #And User enters school details <School>
+   #And User selects the Passing Out Year from dropdown
+   #And User selects the Grading system from dropdown
+   #And User enters score <score>
+   #Then Click on save option
+   #
+   #Examples:
+   #|School|score|
+   #|123456789|90|
+   
+   @12Marks
+   Scenario Outline: To enter valid details for 12th Marks
+   When User clicks on UserProfile
+   And User Clicks on profile
+   And User clicks on Add 12th Marks
+   And User has to select Stream from dropdown
+   And User selects Board from dropdown
+   And User has to enter school details <school>
+   And User selects from Passing Out Year
+   And User selects from Grading system
+   And User enters score <scores>
+   Then Click on save button
+   
+   Examples:
+   |School|score|
+   |CKPS|78|
+   
+   @UGscore
+   Scenario Outline: To Fill valid details for UG
+   When User Clicks on Add UG score
+   And User Clicks on Stream and selects from dropdown
+   And User clicks on Course Name and  selects from dropdown
+   And User enters University and selects the option <University>
+   And User selects Passing Year
+   And User selects Grading from dropdown
+   And User enters score <score>
+   
+   Examples:
+   |University|score|
+   |Cambridge Institute Of Technology|89|
+   
+   

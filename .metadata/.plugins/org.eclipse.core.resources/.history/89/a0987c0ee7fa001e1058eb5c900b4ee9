@@ -1,0 +1,33 @@
+Feature: Working on the profile
+
+  Background: 
+    Given User is logged in on the website
+
+  @valid
+  Scenario Outline: To enter the valid deatils and save
+    When user click on user profile
+    And user click on profile
+    And user selects from dropdown Board
+    And Fill the school details <School>
+    And user selects from dropdown Passing Out Year
+    And user selects from dropdown grading system
+    And Fill the score details <score>
+    Then click on save
+
+    Examples: 
+      | School                    || score |
+      | Christ King Public School ||    89 |
+
+  @invalid
+  Scenario Outline: User enters invalid details and save
+    When User clicks on Profile
+    And User selects the Board option from dropdown
+    And User enters school details <School>
+    And User selects the Passing Out Year from dropdown
+    And User selects the Grading system from dropdown
+    And User enters score <score>
+    Then click on save
+
+    Examples: 
+      | School    || score |
+      | 123456789 ||   90 |

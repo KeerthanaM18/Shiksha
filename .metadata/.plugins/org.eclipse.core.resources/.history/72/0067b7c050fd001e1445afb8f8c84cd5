@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="116.669" tests="5" skipped="0" failures="2" errors="0">
+<testcase classname="Working on the profile" name="To enter the valid details and save - Example #1.1" time="20.055">
+<failure type="org.openqa.selenium.ElementClickInterceptedException" message="element click intercepted: Element &lt;input value=&quot;&quot;&gt; is not clickable at point (528, 196). Other element would receive the click: &lt;div class=&quot;_84a2&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=123.0.6312.123)
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9cf48dc6f5c19105e7da7feba00fa8f6, clickElement {id=f.1A25964C4D485694B9FC2618BC39FF41.d.793CE99C5561D7B8E6DF414950C61219.e.133}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.123, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50561}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50561/devtoo..., se:cdpVersion: 123.0.6312.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (9cf48dc6f5c19105e7da7feba00fa8f6)] -&gt; xpath: (//div[@class=&quot;text-field&quot;])[3]//input]
+Session ID: 9cf48dc6f5c19105e7da7feba00fa8f6">
+<![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <input value=""> is not clickable at point (528, 196). Other element would receive the click: <div class="_84a2">...</div>
+  (Session info: chrome=123.0.6312.123)
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9cf48dc6f5c19105e7da7feba00fa8f6, clickElement {id=f.1A25964C4D485694B9FC2618BC39FF41.d.793CE99C5561D7B8E6DF414950C61219.e.133}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.123, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50561}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50561/devtoo..., se:cdpVersion: 123.0.6312.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (9cf48dc6f5c19105e7da7feba00fa8f6)] -> xpath: (//div[@class="text-field"])[3]//input]
+Session ID: 9cf48dc6f5c19105e7da7feba00fa8f6
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy29.click(Unknown Source)
+	at Page.ProfilePageFactory.year(ProfilePageFactory.java:216)
+	at StepDefinition.EducationBackground.user_selects_from_dropdown_passing_out_year(EducationBackground.java:60)
+	at ✽.User selects from dropdown Passing Out Year(file:///C:/Users/k48/Desktop/Shiksha/Shiksha/src/test/resource/Feature/Profile.feature:12)
+]]>
+</failure>
+<system-out><![CDATA[
+Given User is logged in and click on profile................................passed
+When user click on user profile.............................................passed
+And user click on profile...................................................passed
+And user click on add 10th mark sheet.......................................passed
+And user selects from dropdown Board........................................passed
+And Fill the school details Christ King Public School.......................passed
+And User selects from dropdown Passing Out Year.............................failed
+And User selects from dropdown grading system...............................skipped
+And Fill the score details 89...............................................skipped
+Then click on save..........................................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Working on the profile" name="To valid that the Like functionality" time="22.939">
+<system-out><![CDATA[
+Given User is logged in and click on profile................................passed
+When user click on MBA option...............................................passed
+And User clicks on Exam.....................................................passed
+And User clicks on CAT......................................................passed
+And scroll down.............................................................passed
+And click on Like button....................................................passed
+Then Course shortlisted successfully........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Working on the profile" name="To valid the share functionality" time="18.996">
+<system-out><![CDATA[
+Given User is logged in and click on profile................................passed
+When User clicks on Mba.....................................................passed
+And user selects exam.......................................................passed
+And user selects cat........................................................passed
+And user clicks on share....................................................passed
+And redirects to share option...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Working on the profile" name="To valid shiksha online functionality" time="31.235">
+<system-out><![CDATA[
+Given User is logged in and click on profile................................passed
+When User clicks on ShikshaOnline...........................................passed
+And User selects Programming................................................passed
+And User enters a course....................................................passed
+And User clicks on All filters..............................................passed
+And User apply filter for program...........................................passed
+And User apply filter for level.............................................passed
+And clicks on Enquire option................................................passed
+Then course details sent on mail............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Working on the profile" name="To validate invalid details - Example #1.1" time="23.224">
+<failure type="org.openqa.selenium.NoSuchElementException" message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//div[@class=&quot;text-field&quot;]/input)[2]&quot;}
+  (Session info: chrome=123.0.6312.123)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d1b70b2ce2c8f4752a60f9fc055cc09e, findElement {value=(//div[@class=&quot;text-field&quot;]/input)[2], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.123, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51062}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51062/devtoo..., se:cdpVersion: 123.0.6312.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d1b70b2ce2c8f4752a60f9fc055cc09e">
+<![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//div[@class="text-field"]/input)[2]"}
+  (Session info: chrome=123.0.6312.123)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d1b70b2ce2c8f4752a60f9fc055cc09e, findElement {value=(//div[@class="text-field"]/input)[2], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.123, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51062}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51062/devtoo..., se:cdpVersion: 123.0.6312.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d1b70b2ce2c8f4752a60f9fc055cc09e
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy29.clear(Unknown Source)
+	at Page.ProfilePageFactory.Modify(ProfilePageFactory.java:400)
+	at StepDefinition.EducationBackground.user_enters(EducationBackground.java:257)
+	at ✽.user enters Christ King Public School(file:///C:/Users/k48/Desktop/Shiksha/Shiksha/src/test/resource/Feature/Profile.feature:59)
+]]>
+</failure>
+<system-out><![CDATA[
+Given User is logged in and click on profile................................passed
+When User clicks on UserProfile.............................................passed
+And User clicks on Profile..................................................passed
+And User scroll down........................................................passed
+And User clicks on Education Background.....................................passed
+And User clicks on 10th marks edit..........................................passed
+And user enters 123456789...................................................passed
+And User clicks on save.....................................................passed
+And user enters Christ King Public School...................................failed
+Then click on Done..........................................................skipped
+]]></system-out>
+</testcase>
+</testsuite>
